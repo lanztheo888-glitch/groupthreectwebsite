@@ -1,0 +1,50 @@
+
+.overlay-nav {
+  position: absolute; /* This locks it to the image container */
+  top: 45px;          /* Move this UP or DOWN to fit your orange bar */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Pushes text to the right side */
+  padding-right: 0px;       /* Distance from the right edge */
+  gap: 25px; 
+  z-index: 1000;      /* Keeps it on top of the image */
+  box-sizing: border-box;
+  
+  /* NO BACKGROUND HERE = NO WHITE SQUARE */
+}
+
+
+.anchor {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px; /* Gives the jump point a tiny bit of height */
+  pointer-events: none; /* Makes sure you can't accidentally click it */
+}
+
+
+
+.nav-item {
+  text-decoration: none;
+  color: #FF6600; /* Your orange font */
+  font-family: 'Arial Black', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: rgb(233, 237, 27);
+  transform: translateY(2px); /* Subtle "sink" effect on hover */
+}
+
+
+.image-container {
+    position: relative; /* This is the most important line! */
+    width: 100%;
+}
+
+.base-image {
+    width: 100%; /* Makes sure the image fills the screen */
+    display: block;
+}
